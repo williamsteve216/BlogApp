@@ -1,0 +1,6 @@
+<p [ngClass]="{'list-group-item':true, 'list-group-item-success':this.isLoveIts()==1?true:false, 'list-group-item-danger':this.isLoveIts()==-1?true:false} ">
+  <span [ngClass]="{'text-success':this.isLoveIts()==1?true:false, 'text-danger':this.isLoveIts()==-1?true:false, 'text-title':true} ">{{postItem.title}}</span><span class="float-right"  >{{postItem.created_at | date: 'short'}}</span>
+  <br/><span [ngClass]="{'text-success':this.isLoveIts()==1?true:false, 'text-danger':this.isLoveIts()==-1?true:false} " class="text-justify">{{postItem.content}}</span>
+  <button class="btn btn-success" (click)="this.addLoveIts()">Love it!</button>
+  <button class="btn btn-danger" (click)="this.subLoveIts()">Don't love it!</button>
+</p>
